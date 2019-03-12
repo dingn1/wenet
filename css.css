@@ -1,0 +1,76 @@
+@media (max-device-width: 400px) {  
+    body {
+        font: normal 100% Helvetica, Verdana, sans-serif;
+        width: auto;
+    }
+    section{
+        font: normal 80% Helvetica, Verdana, sans-serif; 
+        width: auto;
+    }
+    footer  {
+        font: normal 130% Helvetica, Verdana, sans-serif; 
+        width: auto;
+    }
+}
+
+@media (min-device-width: 400px) and (max-device-width: 800px) {  
+    body {
+        font: normal 100% Helvetica, Verdana, sans-serif;
+        width: auto;
+    }
+    section{
+        font: normal 90% Helvetica, Verdana, sans-serif; 
+        width: auto;
+    }
+    footer  {
+        font: normal 120% Helvetica, Verdana, sans-serif; 
+        width: auto;
+    }
+
+}
+@media(min-device-width: 800px){
+    body {
+        font-size: 1.4em;
+        width: auto;
+    }
+    section{
+        font-size:1.4em; 
+        width: auto;
+    }
+    footer  {
+        font-size:1.5em; 
+        width: auto;
+    }
+}
+
+header{
+    font-size:3em;
+    text-align: left;
+    margin:10px;
+    padding-left:20px;
+}
+
+a{
+    color:#333333;
+}
+
+p{  
+    float:left;}
+p.test{
+width: 9em;
+}
+
+
+footer li {
+    display:inline;
+}
+
+form {   
+    float: left;
+}
+
+.the-form input:focus + from.placeholder{
+    display:none;
+}
+
+
