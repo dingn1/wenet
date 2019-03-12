@@ -23,15 +23,14 @@ function control(ID) {
 }
 
 function controls(id){
-     var str = "info.php?id="+id;
-     window.location.assign(str); 
-     return false;
+    var str = "info.php?id="+id;
+    window.location.assign(str);
+    return false;
 }
 
 
-    function control2(id){
-     var str = "html.php?id="+id;
-     window.location.assign(str); 
-     return false;
+function control2(id){
+    var str = "html.php?id="+id;
+    window.location.assign(str);
+    return false;
 }
-    

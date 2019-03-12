@@ -30,8 +30,8 @@ and open the template in the editor.
                     </section>
                     <?php
                     session_start();
-                    if (isset($_SESSION['username'])) {
-                        echo "You are logged in as: " . $_SESSION['username'];
+                    if (isset($_SESSION["username"])) {
+                        echo "You are logged in as: " . $_SESSION["username"];
                     } else {
                         header("Location:index.php");
                     }
@@ -61,8 +61,8 @@ and open the template in the editor.
                     </form>
                 </div>
                 <div class="col-xs-6 col-sm-7 col-md-6">
-                    <input type="button" onclick="window.location.href = 'change1.php'" value="Change email" style="margin-left:100px; background-color: red;border-radius: 7px; "><br>
-                    <input type="button" onclick="window.location.href = 'change2.php'" value="Change password" style="margin-left:100px; background-color: red;border-radius: 7px; ">
+                    <input type="button" onclick="window.location.href = 'change_email.php'" value="Change email" style="margin-left:100px; background-color: red;border-radius: 7px; "><br>
+                    <input type="button" onclick="window.location.href = 'change_password.php'" value="Change password" style="margin-left:100px; background-color: red;border-radius: 7px; ">
                 </div>
             </div>
         </div>

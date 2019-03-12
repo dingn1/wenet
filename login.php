@@ -17,7 +17,6 @@
     </head>
 
     <body>
-
         <?php
         session_start();
         if (isset($_SESSION['username'])) {
@@ -27,12 +26,10 @@
         } else {
             header("Location:index.php");
         }
-        ?>	
-
+        ?>
     </body>
 
 </html>
-
 
 
 
@@ -49,18 +46,16 @@ if ($username && $password) {
     $numrows = mysql_num_rows($query);
     if ($numrows != 0) {
         while ($row = mysql_fetch_assoc($query)) {
-            $dbusername = $row['emailaddress'];
-            $dbpassword = $row['password'];
+            $dbusername = $row["emailaddress"];
+            $dbpassword = $row["password"];
         }
         if ($username == $dbusername && $password == $dbpassword) {
-
-            $_SESSION['username'] = $dbusername;
+            $_SESSION["username"] = $dbusername;
             header("location: html.php");
         } else
             echo "Incorrect password";
     } else
         die("That username doesnt exist");
-
 } else
     die("Please enter a username and password");
 ?>

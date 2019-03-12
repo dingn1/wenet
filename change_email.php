@@ -10,8 +10,8 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>footer li {
-                display:inline;
-            }</style>
+            display:inline;
+        }</style>
     </head>
     <body>
         <?php
@@ -23,28 +23,28 @@ and open the template in the editor.
         } else {
             header("Location:index.php");
         }
-        ?>	
+        ?>
         <br><br>
-        <form name="form2" class="the-form" action="change1.php" method="post" > 
+        <form name="form2" class="the-form" action="change1.php" method="post" >
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input size="30" type="text" name="email" id="email" placeholder="Email" required><br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input size="30" type="text" name="emails" id="emails" placeholder="new Email" required><br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input size="30" type="text" name="reemail" id="reemail" placeholder="Email confirmation" required><br>
-            <input type= "submit" name= "submit" value="update"  style="margin-left:100px; background-color: red;border-radius: 7px; ">			                
+            <input type= "submit" name= "submit" value="update"  style="margin-left:100px; background-color: red;border-radius: 7px; ">
         </form>
         <br><br>
         <?php
-        if (isset($_POST['email']) && isset($_POST['emails']) && isset($_POST['reemail'])) {
-            $emailaddress = $_POST['email'];
-            $reemail = $_POST['reemail'];
-            $emails = $_POST['emails'];
+        if (isset($_POST["email"]) && isset($_POST["emails"]) && isset($_POST["reemail"])) {
+            $emailaddress = $_POST["email"];
+            $reemail = $_POST["reemail"];
+            $emails = $_POST["emails"];
             if ($emails = $reemail) {
                 $connect = mysql_connect("127.0.0.1", "root", "") or die("Couldnt connect to database");
                 mysql_select_db("userinfo") or die("Couldnt find database");
                 $query = mysql_query("SELECT * FROM users WHERE emailaddress='$emails'");
                 $numrows = mysql_num_rows($query);
                 if ($numrows != 0) {
-                    echo'new email already exists';
-                    header('Location: change1.php');
+                    echo "new email already exists";
+                    header("Location: change1.php");
                 } else {
 
                     $query = "update info set emailaddress='$emaails' where emailaddress='$email'";
@@ -68,7 +68,7 @@ and open the template in the editor.
         }
         ?>
 
-        <footer style="position:fixed; bottom:10px; display:inline;">                         
+        <footer style="position:fixed; bottom:10px; display:inline;">
             <ul>
                 <li role="presentation" onclick='controls("Contact")'>
                     Contact&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
@@ -80,12 +80,12 @@ and open the template in the editor.
 
                 <li role="presentation" onclick='controls("Terms")'>
                     Terms&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
-                </li>    
+                </li>
 
                 <li role="presentation" onclick='controls("Privacy")'>
                     Privacy
                 </li>
-            </ul>            
+            </ul>
         </footer>
     </body>
 </html>
